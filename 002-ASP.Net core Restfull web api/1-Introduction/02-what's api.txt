@@ -1,0 +1,8 @@
+[1]-What is Web API?
+API stands for Application Programming Interface.
+ Web API is a concept (not a technology) that works on the HTTP Protocol and is used to extend the functionality of an application.
+
+A Web API, or Web Application Programming Interface,
+ is a set of rules and protocols that allows different software applications to communicate with each other over the internet or a network.
+ It enables the exchange of data and functionality between various systems, using HTTP (Hypertext Transfer Protocol) as the communication protocol. 
+

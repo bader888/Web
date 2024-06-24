@@ -1,0 +1,26 @@
+[1] - Controllers
+ in ASP.NET Core Web API Applications play an important role in handling HTTP requests and responses. 
+They are responsible for processing incoming HTTP requests, handling user input, 
+retrieving and saving data, and determining the response to send back to the client.
+ The Controller class in ASP.NET Core Web API must have a “Controller” suffix. 
+For example, if you want to add a controller with the name Home, then the name of the controller should be HomeController. 
+similarly, if you want to add a controller for Student,
+ then the name should be StudentController.
+
+[2] - Difference Between the Controller and ControllerBase class in ASP.NET Core:
+
+
+[3] - Best Practices
+ Thin Controllers: Keep business logic out of controllers and in services or other layers.
+ Use DTOs (Data Transfer Objects): Avoid exposing your database models directly; map them to DTOs.
+ Consistent Naming Convention: Follow RESTful naming conventions for actions.
+ Secure Your API: Implement authentication, authorization, and validate inputs to secure your API.
+ Unit Testing: Write unit tests for your controllers to ensure reliability and maintainability.
+
+[4] - ApiController Attribute in ASP.NET Core Web API
+The ApiController attribute in ASP.NET Core Web API is a feature introduced in ASP.NET Core 2.1 to enhance the development of HTTP-based APIs. It is applied at the class level and offers several conveniences and conventions that make building clean and well-documented Web APIs easier. Here are some key aspects of the ApiController attribute:
+
+Attribute Routing Requirement: With ApiController, attribute routing becomes a requirement. This means you must use [Route], [HttpGet], [HttpPost], etc., to define the routes for your actions.
+Automatic HTTP 400 Responses: It automatically handles model validation errors by providing a standardized response. If the request model does not satisfy the model validation rules, the API responds with a 400 Bad Request without writing additional code.
+Binding Source Parameter: The attribute infers the source of parameters for actions. For instance, it assumes [FromBody] for complex type parameters and [FromQuery] for simple types in GET requests. This reduces the need to specify the source of the parameter explicitly.
+Enhanced Swagger Support: When used in conjunction with tools like Swashbuckle, it provides better metadata for API documentation. This results in more descriptive Swagger UIs.

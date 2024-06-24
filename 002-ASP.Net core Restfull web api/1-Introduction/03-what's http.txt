@@ -1,0 +1,49 @@
+
+[1]- What is HTTP?
+HTTP stands for Hypertext Transfer Protocol. 
+It is the foundation for exchanging information between a web server and a client on the Web.
+ HTTP defines the format for messages (requests and responses) between the Clients and Server
+
+
+[2] - How do the Browser and Server Communicate with each other?
+HTTP is used for communication between the client and server. Let us understand what it means by client and server with an example.
+Suppose you open the web browser, type the URL in the browser, 
+and press the enter button. When you press the enter button,
+ a request is going to the server (called a web server). 
+Whatever data you send from the web browser to the web server is called a Request,
+ and whatever data you receive from the web server is called a Response. 
+This is how the browser and web server communicate with each other in the form of Requests and Responses. 
+This type of communication is only possible by using HTTP Protocol.
+ So, the request can be termed an HTTP Request, and the response can be called HTTP Response.
+Browser is not the only client. For example, if you use a mobile application, your mobile is a client. 
+If you call APIs using tools like Postman and Fiddler, then Postman and Fiddlers are also the clients.
+
+[3] - HTTP Request Components:
+URL: Each Request must have a unique URL.
+Verb (Method): Each Request must have an HTTP Verb. Examples include GET, POST, PUT, PATCH, DELETE, etc.
+Header(s): Each Request can contain one or more Headers.
+Body: Each request can have a body. The body contains the data that we want to send to the server.
+
+1-Start Line
+Request Method: This specifies the action to be performed. Common methods include GET (retrieve data), POST (submit data for processing), PUT (update data), and DELETE (remove data), among others.
+Request URI (Uniform Resource Identifier): The URI (usually a URL) identifies the specific resource on the server that the client wants to interact with.
+
+2-Request Headers: 
+Each HTTP Request can contain one or more Request Headers. The Request Header will be in the form of key-value pairs that provide additional information about the request. Some common headers include:
+
+3-Request Body (Optional): 
+The body of an HTTP request is optional and is used when sending additional data to the server, like in POST, PUT, or PATCH requests. It could contain data from a form submission, file uploads, or JSON/XML data in the case of API requests.
+
+[4] - HTTP Response Components:s
+same component of the request with some differents
+
+[5] - HTTP Verbs or HTTP Methods:
+post - delete - put - get - PATCH 
+
+[6] - HTTP Status Codes:
+The HTTP status code is also one of the important components of HTTP Response. The Status code is issued from the server, and they give information about the response
+1XX: Informational Response 
+2XX: Successful Response
+3XX: Redirection Response
+4XX: Client Error Response 
+5XX: Server Error Response 

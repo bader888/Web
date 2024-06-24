@@ -1,0 +1,17 @@
+[1]-What is the Dependency Inversion Principle?
+The Dependency Inversion Principle (DIP) emphasizes decoupling and abstraction. The principle consists of two core concepts:
+ high-level modules should not depend on low-level modules, 
+and both should depend on abstractions. This inverted dependency relationship promotes flexibility, testability, and maintainability.
+
+[2]-Dependency injection aims to separate the concerns of constructing objects and using them,
+ leading to loosely coupled programs. The pattern ensures that an object or 
+function that wants to use a given service should not have to know how to construct those services.
+
+[3]-dependency registeration lifr time 
+builder.service.addScoped<>  : one instance per request (defulat)
+builder.service.addTransient<>  : one instance per class
+builder.service.AddSingleton<>  : one instance per applicaiton
+
+
+[4] - builder.service 
+is the container ID provide to make registeration operation

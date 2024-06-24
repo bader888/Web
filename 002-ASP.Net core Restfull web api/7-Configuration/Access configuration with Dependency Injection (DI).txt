@@ -1,0 +1,23 @@
+Configuration can be injected into services using Dependency Injection (DI) by resolving the IConfiguration service:
+
+
+public                    
+   class Service
+{
+    private readonly IConfiguration _config;
+
+    public Service(IConfiguration config) =>
+        _config = config;
+
+    public void DoSomething()
+    {
+        var configSettingValue = _config["ConfigSetting"];
+
+        // ...
+    }
+}
+
+builder.Services.Configure<MyOptions>(
+    builder.Configuration.GetSection("MyOptions"));
+
+

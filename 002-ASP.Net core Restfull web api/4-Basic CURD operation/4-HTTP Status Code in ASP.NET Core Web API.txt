@@ -1,0 +1,25 @@
+1xx (Informational):
+2xx (Successful):
+3xx (Redirection):
+4xx (Client Error): 
+5xx (Server Error):
+
+Successful Responses
+200 OK – The HTTP 200 OK success status response code indicates that the request has succeeded. This is often used for GET and POST requests that are processed successfully.
+201 Created – The request has succeeded, and a new resource has been created as a result. This is typically used in response to a POST request.
+202 Accepted– The 202 Status Code indicates that the request has been accepted for processing, but the processing has not been completed. 
+204 No Content – The server successfully processed the request but is not returning any content. This is often used for DELETE requests.
+
+
+Client Error Responses
+400 Bad Request – The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax).
+401 Unauthorized – Although the HTTP standard specifies “unauthorized”, semantically, this response means “unauthenticated”. That is, the client must authenticate itself to get the requested response.
+403 Forbidden – The client does not have access rights to the content; that is, it is unauthorized, so the server refuses to give the requested resource. Unlike 401, the client’s identity is known to the server.
+404 Not Found – The server can not find the requested resource. In the browser, this means the URL is not recognized. In an API, this can also mean that the endpoint is valid, but the resource itself does not exist.
+405 Method Not Allowed – The 405 Method Not Allowed response status code indicates that the server knows the request method but is not supported by the target resource. For example, we have one method which is a POST method in the server and we trying to access that method from the client using GET Verb, then, in that case, you will get a 405-status code.
+
+Server Error Responses
+500 Internal Server Error – The server has encountered a situation it doesn’t know how to handle.
+501 Not Implemented – The server either does not recognize the request method or lacks the ability to fulfil the request.
+503 Service Unavailable – The server is not ready to handle the request. Common causes include a server that is down for maintenance or overloaded.
+504 Gateway Timeout. The 504 Gateway Timeout server error response code indicates that the server while acting as a gateway or proxy, did not get a response in time from the upstream server that is needed to complete the request.

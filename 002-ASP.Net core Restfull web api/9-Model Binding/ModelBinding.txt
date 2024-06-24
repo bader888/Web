@@ -1,0 +1,11 @@
+[1] - Model Binding in ASP.NET Core Web API is a process that allows the mapping of client request data 
+to action method parameters
+provides a flexible and configurable model binding system that can automatically deserialize request data into complex types.
+
+[2]- Model Binding in ASP.NET Core Web API can extract data from various parts of an HTTP request, including:
+ Form Data: Uploading files or receiving form data.
+ Query Strings: Filtering data in a GET request.
+ Route Data : Specifying an item ID in a RESTful URL.
+ HTTP Headers: Authentication tokens or other metadata.
+ Request Body : JSON or XML payloads.
+ 

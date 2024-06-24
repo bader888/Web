@@ -1,0 +1,44 @@
+[1] - single parameters
+	[Route("Employee/{Id}")]
+        public string GetEmployeeById(int Id)
+        {
+            return $"Return Employee Details : {Id}";
+        }
+URL: /Employee/100 
+
+[2] - Passing Multiple Dynamic Values in ASP.NET Core Web API Routing:
+  	[Route("Employee/Gender/{Gender}/City/{CityId}")]
+        public string GetEmployeesByGenderAndCity(string Gender, int CityId)
+        {
+            return $"Return Employees with Gender : {Gender}, City: {CityId}";
+        }
+URL: Employee/Gender/Male/City/10,
+
+
+[3] - Working with Query Strings in ASP.NET Core Web API Routing:
+
+Query Strings are nothing but key-value pairs that you need to pass as part of the URL. 
+you can also pass multiple query strings (i.e., multiple key-value pairs) separated by &.
+before the first query string or after the domain name, you need to use a question mark (?)
+
+       [Route("Employee/Search")]
+        public string SearchEmployees(string Department)
+        {
+            return $"Return Employees with Department : {Department}";
+        }
+
+URL: /Employee/Search?Department=IT
+
+[4] - How do you pass Multiple Query Strings in ASP.NET Core Web API?
+      [Route("Employee/Search")]
+        public string SearchEmployees(string? Department, string? Gender, string? City = null)
+        {
+            return $"Return Employees with Department : {Department}, Gender : {Gender}, City : {City}";
+        }
+
+URL:  (/Employee/Search?City=London&Gender=Male&Department=HR)
+
+
+[5] -  Route Parameters vs  Query Strings
+ Route Parameters: useage Ideal for essential information required to fulfill the request, such as an entity’s unique identifier.
+ Query Strings: useage Suitable for optional data like filtering, sorting, or specifying certain behaviors. Not ideal for identifying resources.

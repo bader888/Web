@@ -1,0 +1,15 @@
+Action filters in ASP.NET Core are attributes that can be applied to controller action methods to perform pre- or post-processing on those methods.
+ They allow you to add functionality that is executed before or after the execution of action methods.
+ Action filters can be used to implement cross-cutting concerns such as logging, authentication, caching, and more.
+
+There are five types of action filters in ASP.NET Core.
+
+Authorization Filter
+Resource Filter
+Action Filter
+Result Filter
+Exception Filter
+
+there are two type : 
+1-Global 
+2-For spicific Controller or Action

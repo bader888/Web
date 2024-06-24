@@ -1,0 +1,29 @@
+You've created a web API, but now you want to control access to it.
+ 
+1- Authentication is knowing the identity of the user. 
+For example, Alice logs in with her username and password, and the server uses the password to authenticate Alice.
+
+2- Authorization is deciding whether a user is allowed to perform an action.
+ For example, Alice has permission to get a resource but not create a resource.
+
+
+authintecation done in many ways:
+1-basic
+ send your credrcial with  every request 
+ server check the credrcial 
+
+2-barer JWT
+ send the credrcial only  once
+ server check and return tooking 
+
+(1) basic
+1-[authorize] attribute
+2-builder.service.addAuthintcation
+3-schem
+4-handler is the ceo to check the user 
+5-header in the request call authization  contain  the username and password in this formate (username:password) enconding using base64encoding as on value
+6-identity
+7-principal
+8-ticket
+9-clame
+10-[AllowAnonymous] attribute

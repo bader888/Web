@@ -1,0 +1,52 @@
+[1] - Middleware is one of the core functionalities of any ASP.NET Core Web Application.
+When we send a request from the client to the server, middleware comes into the picture.
+
+[2] - HTTP Request Pipeline:
+before hitting the controller action method, the request has to pass through a pipeline.
+Once the pipeline is completed, then only it navigates the request to the corresponding controller action method 
+
+[3] - HTTP Request Pipeline in ASP.NET Core Web API Application:
+The Request Pipeline in ASP.NET Core Web API Application can have multiple middlewares
+
+[4] - Middleware in ASP.NET Core Web API:
+Middleware is a piece of code that is used in the HTTP Request Pipeline. 
+An ASP.NET Core Web API Application can have n numbers of middleware
+The order of middleware matters a lot in the execution. 
+Each middleware in the ASP.NET Core Web API Application performs the following tasks:
+ 1- Chooses whether to pass the HTTP Request to the next component in the pipeline. 
+    This can be achieved by calling the next() method within the middleware.
+ 2- Can perform work before and after the next methofin the pipeline.
+
+ASP.NET Core provides some built-in middleware that is ready to be used
+you can also create your own custom middleware.
+
+[5] - Middleware Examples:
+Routing: If you want to implement Routing in your application, then you need to use Routing Middleware in the HTTP Request Processing pipeline.
+Authentication: If you want to authenticate the user then you need to use Authentication Middleware.
+Authorize: The Authorize Middleware is used to Authorize the users while accessing a specific resource.
+Log: If you want to log request and response while processing, then you need Middleware.
+Exception Middleware: You can also use Middleware to handle the exception globally.
+
+[6] - How to Configure Middleware Components in ASP.NET Core application?
+
+[07] - HttpContext 
+[08] - RequestDelegate 
+[09] - next method()
+[10] - Invoke Method()
+
+
+
+
+[7-] Run, Use, Next, and Map Methods in Middleware:
+In order to work with ASP.NET Core Middleware Components, we need to learn about few methods are as follows: 
+Run() Method: The Run() Extension Method is used to complete the Middleware Execution.
+Use() Method: The Use() Extension Method is used to insert a new Middleware component to the Request Processing Pipeline.
+Next() Method: The Next() Extension Method is used to call the next middleware component in the request processing pipeline.
+Map() Method: The Map() Extension Method is used to map the Middleware to a specific URL.
+
+[inportents] : Points to Remember while working with ASP.NET Core Middleware:
+1-The ASP.NET Core Request Processing Pipeline consists of a sequence of middleware components (custom plus built-in) that are going to be called one after the other. If we want to call the next middleware components then we need to use the next method.
+2-Each middleware component in ASP.NET Core Application can perform some operations before and after calling the next component using the next method. A middleware component in ASP.NET Core Application can also decide not to call the next middleware component which is called short-circuiting the request pipeline.
+3-The ASP.NET Core middleware component can access both the incoming request and the outgoing response.
+4-The Run method in ASP.NET Core is the terminating Middleware Component which means it is not possible to call the next middleware component.
+5-The order in which the middleware components are registered in the Configure method defines the order in which these middleware components are going to be invoked on requests and the reverse order for the response. So, the order is critical for defining the security, performance, and functionality of the application.

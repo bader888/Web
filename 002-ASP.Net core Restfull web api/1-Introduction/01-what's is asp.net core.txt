@@ -1,0 +1,48 @@
+
+[2]-What is ASP.NET Core Web API?
+The term API stands for Application Programming Interface.
+ ASP.NET Core Web API is a framework provided by Microsoft that makes it easy to build Web APIs, i.e.,
+ HTTP-based services.
+ The ASP.NET Core Web API is ideal for building Restful services on top of the .NET Platform,
+ commonly known as the .NET Core Platform. These Web API services can then be consumed by a variety of clients, such as
+ 
+ Browsers
+ Mobile applications
+ Desktop applications
+ IOTs, etc.
+
+ASP.NET Core Web API is commonly used for building RESTful APIs that expose data and services over HTTP.
+ It’s suitable for various scenarios,
+ including building back-end services for web,
+ mobile, and desktop applications, providing data to single-page applications (SPAs),
+ and creating microservices that can be deployed independently.
+
+[3]-Why We Need ASP.NET Core Web API?
+Nowadays, a web application is not sufficient or enough to reach all its customers. 
+People are becoming very smart; they are using different types of devices, such as mobile, iPhones, tablets, etc., 
+in their daily lives. 
+These devices have a lot of apps that make their life easy. In simple words, we can say that we are moving toward the app world from the web.
+
+So, if we want to expose our data (business data) to the browsers and to all these modern device apps in a fast, 
+secure, and simple way, then we should have an API that should be compatible with browsers and all these modern devices.
+
+The ASP.NET Core Web API is a great framework for building HTTP services that can be consumed by a broad range of clients,
+ including browsers, mobiles, iPhones, and tablets.
+
+[4]-ASP.NET Core Web API Features:
+1-Cross-Platform Support:
+2-Performance
+3-Routing
+4-Model Binding and Validation
+5-Dependency Injection
+6-Middleware Support
+7-Content Negotiation and Serialization
+8-Versioning
+
+
+[][][][] .NET Core (.NET) vs ASP.NET Core:
+Many people are confused between ASP.NET Core and .NET Core. Please note that ASP.NET Core and .NET Core are not the same. 
+They are different, just like ASP.NET and .NET Framework are different.
+ ASP.NET Core is a fast, lightweight, modular, and open-source framework for creating Web Applications, Mobile Applications, 
+and Web Services that run on Windows, 
+Linux, and macOS. .NET Core is a software platform or you can say Runtime Environment on which ASP.NET Core applications run.

@@ -1,0 +1,57 @@
+[1] - Why Do We Need Logging in Web Applications?
+ -Event Recording: Logging captures various events within an application, 
+such as user actions,
+system errors, data transactions, etc. 
+These logged events are usually stored in files, databases,
+or external logging services, providing a historical record of what has happened over time.
+ -Debugging and Troubleshooting: Logs are an invaluable resource for developers when debugging or troubleshooting issues.
+By examining log files, developers can trace the sequence of events leading up to an error or performance bottleneck,
+making it easier to identify and fix problems.
+
+[2] - Components of Logging
+Log Levels:
+Log Messages:
+Log Output:
+Log Frameworks:
+
+[3] - What is Logging in ASP.NET Core Web API?
+
+[4] - What are the Logging Providers in ASP.NET Core Web API?
+Console Logging Provider: 
+Debug Logging Provider: 
+Serilog Logging Provider:
+
+[5] - How Do We Configure Logging in ASP.NET Core Web API?
+Logging in ASP.NET Core Web API can be configured in the appsettings.json file or programmatically in the Program.cs file.
+ASP.NET Core includes a default logging configuration that is set up when your application starts. This configuration logs to the console and Debug window by default.
+
+[6] - Add Logging Providers:
+builder.Services.AddLogging(builder =>
+{
+    builder.AddConsole();
+    // Add other providers as needed
+});
+
+[7] - Create and Use ILogger Instances:
+public class MyService
+{
+    private readonly ILogger<MyService> _logger;
+
+    public MyService(ILogger<MyService> logger)
+    {
+        _logger = logger;
+    }
+
+    public void MyMethod()
+    {
+        _logger.LogInformation("This is a log message.");
+    }
+}
+
+[8] - Best Practices:
+To minimize the impact of logging on performance, follow best practices such as: 
+-Log only what is necessary.
+-Use asynchronous logging where possible.
+-Avoid complex object serialization.
+-Use appropriate logging levels to reduce the volume of logged information.
+-Consider the impact of logging destinations and choose them based on the application’s requirements and environment.

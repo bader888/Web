@@ -1,0 +1,43 @@
+[1] - ASP.NET Core Web API Attribute Routing with Route Constraints
+Route constraints in ASP.NET Core Web API are used to restrict the HTTP requests that can match a particular route. 
+They enable the API to ensure that the parameters of a route are of a certain type,
+ range, or pattern, which can be essential for the API’s logic and security.
+ Implementing route constraints effectively can lead to more robust and error-free applications.
+The Route Constraints in ASP.NET Core Web API Attribute Routing are nothing but a set of rules that can be applied to routing parameters to restrict how the parameters in the route template are matched. 
+
+The syntax to use Route Constraints is: {parameter:constraint} or more than one constraints {parameter:constraint1:constraint2}
+
+onstraints.
+
+Type: int, double, bool, float, datetime, etc.
+Min: min(number)
+Max: max(number)
+Range: range(10. 15)
+Alpha: alpha
+MinLength: minlength(5)
+MaxLength: maxlength(10)
+Length: length(10)
+Required: required
+Regex: regex(expression)
+
+
+[2] usage scinario: tow actions have the same varbs and one parameter 
+when the request comes, the application does not identify which version of the GetEmployeeDetails() method to use. 
+	[Route("{EmployeeId}")]
+        [HttpGet]
+        public string GetEmployeeDetails(int EmployeeId)
+        {
+            return $"Response from GetEmployeeDetails Method, EmployeeId : {EmployeeId}";
+        }
+
+        [Route("{EmployeeName}")]
+        [HttpGet]
+        public string GetEmployeeDetails(string EmployeeName)
+        {
+            return $"Response from GetEmployeeDetails Method, EmployeeName : {EmployeeName}";
+        }
+
+solve the problem: 
+[Route(“{EmployeeId:int}”)]
+Note: We don’t need to specify anything for the string parameter as,
+ by default, all the parameters in the ASP.NET Core Web Application are string only.

@@ -1,0 +1,38 @@
+we need to understand how the application will come to know which request will be mapped to which controller action method. 
+Basically, the mapping between the URL and resource (controller action method) is nothing but the concept of Routing.
+
+So, Routing in ASP.NET Core Web API is a concept that maps incoming HTTP requests to specific controllers and actions in your application. 
+It determines how the Web API handles an HTTP request.
+
+[1] - How Does the Routing Work in ASP.NET Core Web API? 
+1- Configuration of Routing
+2- Route Templates:
+3- Route Matching:
+4- Parameter Binding: 
+5- Middleware Pipeline: 
+6- Attribute Routing vs. Conventional Routing
+7- Routing Constraints: 
+
+
+[2] - Configuring the Routing Middlewares in ASP.NET Core: To enable Routing in ASP.NET Core,
+*app.UseRouting();
+ This middleware enables routing capabilities in your ASP.NET Core application. 
+ It is responsible for matching incoming HTTP requests to routes that have been defined in your application
+
+*app.MapControllers();
+his extension method is used to map attribute-routed controllers. 
+It essentially tells the application to look for controllers in your project and creates routes
+for them based on the attributes you’ve defined (like [Route], [HttpGet], etc.).
+
+[3] - Adding Attribute Routing in ASP.NET Core Web Application:
+using rout attribute or httpget ...etc
+
+[4] - What is ApiController Attribute in ASP.NET Core Web API?
+When you apply this attribute to a controller class
+it enables various API-specific behaviors and conventions. Here are some key aspects of the ApiController attribute:
+
+Attribute Routing Requirement:
+Automatic HTTP 400 Responses:
+Binding Source Parameter Inference
+Problem Details for Error Status Codes: 
+
