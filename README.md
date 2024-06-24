@@ -1,2 +1,2 @@
 # Web
-every thin i learn in the web you will find here
+Everything I learned on the web you will find here the technology and projects I did
